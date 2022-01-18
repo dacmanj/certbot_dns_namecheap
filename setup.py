@@ -10,7 +10,7 @@ version = '0.28.0.dev0'
 # acme/certbot version.
 install_requires = [
     'acme>=0.21.1',
-    'certbot>=1.22.0,<2',
+    'certbot>=1.20.0,<2',
     'dns-lexicon>=3.8,<4', # Support for >1 TXT record per name
     'mock',
     'setuptools',
