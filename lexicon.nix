@@ -15,7 +15,7 @@
 
 buildPythonPackage rec {
   pname = "dns-lexicon";
-  version = "3.9.0";
+  version = "3.8.4";
   format = "pyproject";
 
   src = fetchPypi {
@@ -27,6 +27,7 @@ buildPythonPackage rec {
 
   propagatedBuildInputs = [ beautifulsoup4 tldextract pyyaml requests cryptography ];
 
+  # Tests are failing for some reason...
   # checkInputs = [ pytestCheckHook pytest-vcr vcrpy ];
 
   doCheck = isPy3k;

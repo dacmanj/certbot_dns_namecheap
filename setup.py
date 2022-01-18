@@ -11,7 +11,7 @@ version = '0.28.0.dev0'
 install_requires = [
     'acme>=0.21.1',
     'certbot>=1.22.0,<2',
-    'dns-lexicon>=3.9,<4', # Support for >1 TXT record per name
+    'dns-lexicon>=3.8,<4', # Support for >1 TXT record per name
     'mock',
     'setuptools',
     'zope.interface',
