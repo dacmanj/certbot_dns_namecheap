@@ -1,3 +1,4 @@
+# this service should be run in the letsencrypt.gearstain cluster
 version: '3'
 services:
   certbot-dns-namecheap:
