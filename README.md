@@ -31,12 +31,11 @@ The path to this file can be provided by using the `--certbot_dns_namecheap:dns-
 * **Recommended usage**. Create the credentials file in the parent directory (or adapt docker-compose.yml mount endpoint) run:
 ```sh
 docker-compose run certbot-dns-namecheap  certonly \
-  --non-interactive  -a certbot-dns-namecheap:dns-namecheap \
-  --certbot-dns-namecheap:dns-namecheap-credentials=/namecheap.ini \
-  --agree-tos \
+  --non-interactive  -a dns-namecheap \
+  --dns-namecheap-credentials=/namecheap.ini \
   --agree-tos \
   --email "your@mail.com" \
-  -d *.example.com \
+  -d example.com \
   --test-cert
 ```
 
@@ -52,8 +51,8 @@ docker run -it --rm \
   -v $(pwd)/../secretpath/namecheap.ini:/namecheap.ini \
   schubc/certbot-dns-namecheap certonly \
   --non-interactive \
-  -a certbot-dns-namecheap:dns-namecheap \
-  --certbot-dns-namecheap:dns-namecheap-credentials=/namecheap.ini \
+  -a dns-namecheap \
+  --dns-namecheap-credentials=/namecheap.ini \
   --agree-tos \
   --email "your@mail.com" \
   -d example.com \

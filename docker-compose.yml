@@ -5,8 +5,9 @@ services:
     build:
        context: .
        args:                                                                     
-         - CERTBOT_TAG=v0.40.1
+         - CERTBOT_TAG=arm64v8-latest
     volumes:
       - ./out/certs:/etc/letsencrypt
       - ./out/logs:/var/log/letsencrypt
-      - ../namecheap.ini:/namecheap.ini
+      - ./namecheap.ini:/namecheap.ini
+  

@@ -34,3 +34,6 @@ tags
 # docker files
 .docker
 .DS_Store
+
+namecheap.ini
+out/
